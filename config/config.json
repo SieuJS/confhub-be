@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "postgres.affwzdnoxkztdejfdizk",
+    "password": "datn@httt.com",
+    "database": "postgres",
+    "host": "aws-0-ap-southeast-1.pooler.supabase.com",
+    "dialect": "postgres"
+  }
+}
