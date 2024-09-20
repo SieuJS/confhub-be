@@ -324,7 +324,7 @@ class UserController {
                 { where: { id: response.id }, returning: true })
 
             // res.cookie('refreshToken', newRefreshToken, { httpOnly: true, maxAge: parseInt(process.env.REFRESH_TOKEN_DAYS) * 24 * 60 * 60 * 1000, secure: true, sameSite: 'lax' });
-            res.redirect(`https://jjoevv.github.io/demo-conference-search/#/login?refreshToken=${newRefreshToken}`);
+            res.redirect(`${process.env.FRONTEND_URL}/#/login?refreshToken=${newRefreshToken}`);
 
             // return res.status(status.OK).json({
             // message: "Login successfully",
