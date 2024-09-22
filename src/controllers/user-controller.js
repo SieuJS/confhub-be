@@ -386,7 +386,13 @@ class UserController {
                     title: process.env.DEACTIVATE_ACCOUNT,
                     uEmail: user.email
                 }
-                sendingEmail(payload);
+                
+                try {
+                    sendingEmail(payload);
+                }
+                catch (error) {
+                    console.log("Error in sending email: " + error)
+                };
 
                 return res.status(status.OK).json({
                     message: "You have been banned.",
