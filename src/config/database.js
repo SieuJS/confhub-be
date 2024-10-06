@@ -8,13 +8,6 @@ const sequelize = new Sequelize(process.env.DB_DATABASE, process.env.DB_USER, pr
     port: process.env.DB_PORT,
     dialect: 'postgres',
     logging: false,
-    ssl : true,
-    dialectOptions : {
-        ssl: {
-            require: true,
-            ca: fs.readFileSync(path.join(__dirname, '../../certs/ca-certificate.crt')).toString(),
-        }
-    }
     }
 );
 

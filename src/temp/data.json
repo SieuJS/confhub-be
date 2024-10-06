@@ -1,0 +1,21 @@
+[
+  {
+    "id": "b993de5b-a151-4974-a9ef-64a1d5c16abf",
+    "information": {
+      "name": "International Joint Conference on Autonomous Agents and Multiagent Systems (previously the International Conference on Multiagent Systems, ICMAS, changed in 2000)",
+      "acronym": "AAMAS",
+      "rating": null,
+      "rank": "A*",
+      "nkey": "6701396922873f1cab923847",
+      "source": "CORE2023",
+      "status": true,
+      "fieldOfResearch": [
+        "none"
+      ]
+    },
+    "organizations": [],
+    "importantDates": [],
+    "updatedAt": "2024-10-05T13:04:51.865Z",
+    "view": 3
+  }
+]

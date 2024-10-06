@@ -13,31 +13,31 @@ require('dotenv').config();
 
 const selectAllCallForPapers = async function (filterConditions) {
     try {
-        // const filterResults = await model.callForPaperModel.findAll({
-        //     attributes: ['cfp_id'],
-        //     // where: filterConditions.filter,
-        //     // include: [
-        //     //     { model: model.sourceModel, as: "Source", required: false, duplicating: false, attributes: [] },
-        //     //     { model: model.conferenceModel, as: "Conference", required: false, duplicating: false, attributes: [] },
-        //     //     { model: model.importantDateModel, as: "ImportantDates", required: false, duplicating: false, attributes: [] },
-        //     //     { model: model.organizationModel, as: "Organizations", required: false, duplicating: false, attributes: [] },
-        //     //     {
-        //     //         model: model.fieldOfResearchModel, as: "FieldOfResearches", required: false, duplicating: false, attributes: [],
-        //     //         include: { model: model.cfpForModel, as: "CfpFors", required: false, duplicating: false, attributes: [] },
-        //     //     }
-        //     // ],
-        //     // order: order,
-        //     // limit: filterConditions.size,
-        //     // offset: filterConditions.offset,
-        // });
+        const filterResults = await model.callForPaperModel.findAll({
+            attributes: ['cfp_id'],
+            where: filterConditions.filter,
+            include: [
+                { model: model.sourceModel, as: "Source", required: false, duplicating: false, attributes: [] },
+                { model: model.conferenceModel, as: "Conference", required: false, duplicating: false, attributes: [] },
+                { model: model.importantDateModel, as: "ImportantDates", required: false, duplicating: false, attributes: [] },
+                { model: model.organizationModel, as: "Organizations", required: false, duplicating: false, attributes: [] },
+                {
+                    model: model.fieldOfResearchModel, as: "FieldOfResearches", required: false, duplicating: false, attributes: [],
+                    include: { model: model.cfpForModel, as: "CfpFors", required: false, duplicating: false, attributes: [] },
+                }
+            ],
+            // order: order || [['createdAt', 'DESC']],
+            // limit: filterConditions.size || 10,
+            // offset: filterConditions.offset || 0,
+        });
 
-        // const conferenceIDs = filterResults.map(item => item.cfp_id);
-        // const conferences = await Promise.all(conferenceIDs.map(async (id) => {
-        //     return await selectCallForPaperForFilter(id);
-        // }));
+        const conferenceIDs = filterResults.map(item => item.cfp_id);
+        let conferences = await Promise.all(conferenceIDs.map(async (id) => {
+            return await selectCallForPaperForFilter(id);
+        }));
 
         const status = filterConditions.raw.status;
-        let conferences = [...conferenceData.listOfConferences];
+        // conferences = [...conferenceData.listOfConferences];
 
         if (status === 'true' || status === 'false') {
             conferences = conferences.filter(i => String(i.information.status) === String(status));

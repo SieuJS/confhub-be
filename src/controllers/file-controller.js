@@ -23,7 +23,7 @@ class FileController {
 
                 // 2. crawl job
                 const jobID = await addCrawlJob(newConference._id.toString(), "import conference");
-
+                console.log(">>crawl job at file-controler",jobID);
                 // 3. pg
 
                 const conferenceObj = await dataPineline(newConference);

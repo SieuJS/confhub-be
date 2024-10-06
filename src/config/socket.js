@@ -1,5 +1,5 @@
 const { Server } = require('socket.io');
-// const { increaseUserLog } = require('../utils/dashboard');
+const { increaseUserLog } = require('../utils/dashboard');
 
 let io;
 const users = new Map();
@@ -39,7 +39,7 @@ const socketListening = (io) => {
             users.set(userID, socket.id);
             console.log(`User ${userID} registered with socket ID ${socket.id}`);
             io.emit('currentUser', users.size);
-            // increaseUserLog();
+            increaseUserLog();
 
         } else {
             console.log('No user ID found in headers.');

@@ -81,9 +81,9 @@ async function loadDataForFilter() {
         return await selectCallForPaperForFilter(id.cfp_id);
     }));
 
-    // const conferencesJSON = JSON.stringify(conferences, null, 2);
+    const conferencesJSON = JSON.stringify(conferences, null, 2);
 
-    // fs.writeFileSync('./src/temp/data.json', conferencesJSON);
+    fs.writeFileSync('./src/temp/data.json', conferencesJSON);
 
     conferenceData.listOfConferences = [...conferences];
 

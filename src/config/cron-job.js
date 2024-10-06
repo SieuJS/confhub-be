@@ -19,9 +19,8 @@ async function setupCronJobs() {
     catch (e) {
         console.log("Error at setupCronJobs: ", e);
     }
-
-    // await runDailyCron();
-    // await runUpdateCycleCron();
+    await runDailyCron();
+    await runUpdateCycleCron();
 }
 
 function runDailyCron() {

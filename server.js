@@ -27,7 +27,7 @@ app.use(cors());
 app.use(cookieParser());
 
 // middleware limit number of requests
-// app.use(rateLimiter);
+app.use(rateLimiter);
 
 // middleware log information about the interactions and activities
 app.use(infoLogger);
@@ -68,7 +68,7 @@ const setupCronJobs = require('./src/config/cron-job');
 
 (async () => {
 	await dbConnect() ;
-	await dataSeeding(['admin', 'conferences']);
+	// await dataSeeding(['admin', 'conferences']);
 	await crawlerDBConnect();
 
 	// create log

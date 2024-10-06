@@ -13,7 +13,8 @@ const verifyAccessToken = asyncHandler(async (req, res, next) => {
                 data: 'Identification failed'
             });
             req.user = decode;
-            next();
+
+            return next();
         })
     } else {
         return res.status(401).json({
