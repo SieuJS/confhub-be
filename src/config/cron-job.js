@@ -12,7 +12,7 @@ let runningCycle = null;
 async function setupCronJobs() {
     console.log("Cron job is setup.");
 
-    runningCycle = await model.updateCycleModel.findOne() || { cycle: 1, period: 1 };
+    runningCycle = await model.updateCycleModel.findOne() || { cycle: 1, period: 0 };
     try {
     await createOrUpdateCronJob(runningCycle.cycle);
     }
@@ -61,8 +61,8 @@ function runUpdateCycleCron() {
         setInterval(async () => {
             const currentCycle = await model.updateCycleModel.findOne();
 
-            if (currentCycle.cycle != runningCycle.cycle) {
-                console.log(Date() + `Phát hiện thay đổi chu kỳ từ ${runningCycle.cycle} thành ${currentCycle.cycle}`);
+            if (currentCycle?.cycle != runningCycle.cycle) {
+                console.log(Date() + `Phát hiện thay đổi chu kỳ từ ${runningCycle.cycle} thành ${currentCycle?.cycle}`);
                 createOrUpdateCronJob(currentCycle.cycle);
                 runningCycle = currentCycle;
             }
@@ -71,6 +71,5 @@ function runUpdateCycleCron() {
         // Không đóng kết nối ở đây nếu setInterval đang sử dụng
     }
 }
-
 
 module.exports = setupCronJobs;

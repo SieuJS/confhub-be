@@ -18,7 +18,7 @@ const monitorChanges = async () => {
         const changeStream = JobModel.watch();
 
         changeStream.on('change', async (change) => {
-            // console.log('Server detected change:', change);
+
             try {
                 const jobID = change.documentKey._id.toString();
                 // admin will listen all change
@@ -35,6 +35,9 @@ const monitorChanges = async () => {
                     job: job,
                     cfp: cfp
                 }
+
+                console.log('>>Change on job:');
+
                 io.emit('job', res);
 
                 // user only listen to update change
