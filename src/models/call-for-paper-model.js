@@ -23,6 +23,9 @@ const CallForPaper = sequelize.define('CallForPaper', {
     rank: {
         type: DataTypes.TEXT
     },
+    rank_source : {
+        type : DataTypes.JSONB
+    },
     owner: {
         type: DataTypes.TEXT,
         // isIn: {

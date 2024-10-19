@@ -3,10 +3,11 @@ const { status } = require('../constants/index.js');
 const asyncHandler = require('express-async-handler');
 const { addCrawlJob } = require('../utils/crawl-job.js');
 const mongoose = require('mongoose');
-const { dataPineline } = require('../utils/copy-of-datapineline.js');
+const { dataPipeline } = require('../utils/copy-of-datapipeline.js');
 const { conferenceData, insertToList } = require('../temp/index');
 const { insertCallForPaper, selectCallForPaperForFilter } = require('../utils/cfp-queries.js');
-
+const { callForPaperModel, conferenceModel } = require('../models/index.js');
+const { add } = require('winston');
 class FileController {
     insert = asyncHandler(async (req, res, next) => {
         try {
@@ -20,16 +21,19 @@ class FileController {
                 newConference.Rank = req.body.rank;
                 newConference.PrimaryFoR = req.body.PrimaryFoR
                 await newConference.save();
+                
+                
 
                 // 2. crawl job
                 const jobID = await addCrawlJob(newConference._id.toString(), "import conference");
                 console.log(">>crawl job at file-controler",jobID);
+
                 // 3. pg
 
-                const conferenceObj = await dataPineline(newConference);
+
+                const conferenceObj = await dataPipeline(newConference);
                 if (conferenceObj) {
                     const pgInstance = await insertCallForPaper(conferenceObj);
-
                     // 4. view
                     await insertToList(pgInstance.cfp_id, conferenceData.listOfConferences);
 
@@ -68,7 +72,7 @@ class FileController {
                     });
                 }
 
-                const conferenceObj = await dataPineline(existingConference);
+                const conferenceObj = await dataPipeline(existingConference);
                 if (conferenceObj) {
                     const pgInstance = await insertCallForPaper(conferenceObj);
 
@@ -111,7 +115,7 @@ class FileController {
                 const jobID = await addCrawlJob(newConference._id.toString(), "import conference");
 
                 // 3. pg
-                const conferenceObj = await dataPineline(newConference);
+                const conferenceObj = await dataPipeline(newConference);
                 if (conferenceObj) {
                     const pgInstance = await insertCallForPaper(conferenceObj);
 

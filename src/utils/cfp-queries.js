@@ -9,6 +9,7 @@ const { submissionKeywords } = require('../keyword/index.js');
 const { Op } = require('sequelize');
 const { sendNotifications } = require('../services/notification-services.js');
 const { conferenceData } = require('../temp/index.js');
+const AltSoureQuery = require('./alt-source-queries');
 require('dotenv').config();
 
 const selectAllCallForPapers = async function (filterConditions) {
@@ -189,6 +190,7 @@ const insertCallForPaper = async function (conference, transaction) {
     try {
         const [src] = await SourceQuery.insertSource(conference.source, transaction);
         const [conf] = await ConferenceQuery.insertConference(conference, transaction);
+
         const cfp = await model.callForPaperModel.create({
             content: conference.callForPaper,
             link: conference.link,
@@ -211,6 +213,7 @@ const insertCallForPaper = async function (conference, transaction) {
         return cfp;
 
     } catch (error) {
+
         throw (error);
     }
 };

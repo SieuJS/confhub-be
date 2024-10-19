@@ -36,8 +36,6 @@ const monitorChanges = async () => {
                     cfp: cfp
                 }
 
-                console.log('>>Change on job:');
-
                 io.emit('job', res);
 
                 // user only listen to update change

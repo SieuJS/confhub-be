@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./../config/database');
+const { truncate } = require('./user-model');
 
 const Source = sequelize.define('Source', {
     src_id: {
@@ -10,7 +11,8 @@ const Source = sequelize.define('Source', {
     src_name: {
         type: DataTypes.TEXT,
         allowNull: false
-    }
+    },
+ 
 }, {
     timestamps: false,
     tableName: 'sources'

@@ -13,6 +13,7 @@ const calenderNoteModel = require('./calender-note-model');
 const settingModel = require('./setting-model');
 const notificationModel = require('./notification-model');
 const updateCycleModel = require('./update-cycle-model');
+const altSource = require('./alt-source');
 const {    
     UserLog,
     ETLLog}  = require('./dashboard');
@@ -22,6 +23,8 @@ callForPaperModel.belongsTo(conferenceModel);
 
 sourceModel.hasMany(callForPaperModel);
 callForPaperModel.belongsTo(sourceModel);
+
+conferenceModel.hasMany(altSource, { onDelete: 'CASCADE' });
 
 callForPaperModel.hasMany(cfpForModel, { onDelete: 'CASCADE' });
 cfpForModel.belongsTo(callForPaperModel);

@@ -1,4 +1,4 @@
-const dataPineline = async (conference) => {
+const dataPipeline = async (conference) => {
     try {
 
         if (conference.Rank == 'C' || conference.Rank == 'B' || conference.Rank == 'A' || conference.Rank == 'A*') {
@@ -109,5 +109,5 @@ const fieldOfRearchCategories = [
 ];
 
 module.exports = {
-    dataPineline
+    dataPipeline
 }

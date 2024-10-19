@@ -60,7 +60,11 @@ function runUpdateCycleCron() {
     try {
         setInterval(async () => {
             const currentCycle = await model.updateCycleModel.findOne();
-
+            if (!currentCycle) {
+                console.log("Không tìm thấy chu kỳ mới.");
+                model.updateCycleModel.create({ cycle: 1, period: 1 });
+                return;
+            }
             if (currentCycle?.cycle != runningCycle.cycle) {
                 console.log(Date() + `Phát hiện thay đổi chu kỳ từ ${runningCycle.cycle} thành ${currentCycle?.cycle}`);
                 createOrUpdateCronJob(currentCycle.cycle);

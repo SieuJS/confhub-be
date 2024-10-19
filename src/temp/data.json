@@ -1,12 +1,12 @@
 [
   {
-    "id": "8f7b15b9-7820-4086-b6f9-d9105eee01ec",
+    "id": "3803ca0c-8eb9-4ae1-9f99-a40d138e889b",
     "information": {
       "name": "ACIS Conference on Software Engineering Research, Management and Applications",
       "acronym": "SERA",
       "rating": null,
       "rank": "C",
-      "nkey": "67078bbede06a49fe6f38169",
+      "nkey": "6711197476b254702113a426",
       "source": "CORE2023",
       "status": true,
       "fieldOfResearch": [
@@ -15,9 +15,66 @@
     },
     "organizations": [
       {
-        "org_id": "4218f1d3-cd27-41de-a885-7a63a7474f2d",
+        "org_id": "f1627619-9ab9-4cee-98e4-7dcb692cf384",
         "name": "default",
-        "type": "offline",
+        "type": "hybrid",
+        "location": "updating",
+        "start_date": null,
+        "end_date": null,
+        "status": "new"
+      },
+      {
+        "org_id": "9e4f01cd-db1b-40d4-b600-8de68f78ff94",
+        "name": "default",
+        "type": "hybrid",
+        "location": "updating",
+        "start_date": null,
+        "end_date": null,
+        "status": "old"
+      }
+    ],
+    "importantDates": [
+      {
+        "date_id": "2c96408a-fac6-4db4-b1e3-194571acdf0e",
+        "date_type": "Full Paper Submission",
+        "date_value": "2024-03-22",
+        "status": "new"
+      },
+      {
+        "date_id": "feb823de-7307-47b0-8fe1-4c9279cbb48f",
+        "date_type": "Acceptance Notification",
+        "date_value": "2024-04-08",
+        "status": "new"
+      },
+      {
+        "date_id": "4121a07c-6f56-494b-bd6e-d134728fb6a6",
+        "date_type": "Camera Ready Papers/Registration",
+        "date_value": "2024-04-19",
+        "status": "new"
+      }
+    ],
+    "updatedAt": "2024-10-17T14:08:32.825Z",
+    "view": 9
+  },
+  {
+    "id": "69d3f404-d3b2-493b-94e2-cd0e792557ab",
+    "information": {
+      "name": "ACIS Conference on Software Engineering Research, Management and Applications",
+      "acronym": "SERA",
+      "rating": null,
+      "rank": "C",
+      "nkey": "6711197476b254702113a431",
+      "source": "CORE2022",
+      "status": true,
+      "fieldOfResearch": [
+        "Applied computing"
+      ]
+    },
+    "organizations": [
+      {
+        "org_id": "5c8950de-52bb-4c02-af9f-3f09b7a580a9",
+        "name": "default",
+        "type": "hybrid",
         "location": "updating",
         "start_date": null,
         "end_date": null,
@@ -26,93 +83,46 @@
     ],
     "importantDates": [
       {
-        "date_id": "7b1dd9df-76ef-4a17-9c12-7be49ffa907f",
+        "date_id": "0742da16-bfff-4fae-9beb-f33a4028ef56",
         "date_type": "Full Paper Submission",
         "date_value": "2024-03-22",
         "status": "new"
       },
       {
-        "date_id": "a00f16e8-907b-4d9a-9553-9bdf29746ea0",
-        "date_type": "Full Paper Submission",
-        "date_value": "2024-03-22",
-        "status": "new"
-      },
-      {
-        "date_id": "50527fc7-9334-4787-9046-55d69bce745f",
+        "date_id": "52b1741c-0765-4c02-810d-9c0ce95d29f6",
         "date_type": "Acceptance Notification",
         "date_value": "2024-04-08",
         "status": "new"
       },
       {
-        "date_id": "8fad7c35-e403-4500-890e-712fc3f6e3c5",
-        "date_type": "Acceptance Notification",
-        "date_value": "2024-04-08",
-        "status": "new"
-      },
-      {
-        "date_id": "ffd2ba5b-33ea-433f-907f-495d1008e76d",
-        "date_type": "Camera Ready Papers/Registration",
-        "date_value": "2024-04-19",
-        "status": "new"
-      },
-      {
-        "date_id": "e333835c-700c-41b8-b2f9-516012bb688b",
+        "date_id": "e72c51cb-e5a2-4dcb-9719-b94b3bbbdae2",
         "date_type": "Camera Ready Papers/Registration",
         "date_value": "2024-04-19",
         "status": "new"
       }
     ],
-    "updatedAt": "2024-10-11T06:00:59.309Z",
+    "updatedAt": "2024-10-17T14:08:26.777Z",
     "view": 0
   },
   {
-    "id": "66ff2775-6bc2-4f7b-94ce-92c4e342226a",
+    "id": "13cf9e6b-a0f7-4d21-8f19-357ecff1351b",
     "information": {
-      "name": "ACM International Conference on Advances in Computer Entertainment (merged with DIMEA, Digital Interactive Media in Entertainment and Arts, in 2009)",
-      "acronym": "ACE",
+      "name": "ACIS Conference on Software Engineering Research, Management and Applications",
+      "acronym": "SERA",
       "rating": null,
       "rank": "C",
-      "nkey": "67078468de06a49fe6f38150",
-      "source": "CORE2023",
-      "status": true,
-      "fieldOfResearch": [
-        "none"
-      ]
-    },
-    "organizations": [
-      {
-        "org_id": "9d6dddb0-ac07-4bb5-9c72-7b1a149b39e1",
-        "name": "default",
-        "type": "offline",
-        "location": "updating",
-        "start_date": null,
-        "end_date": null,
-        "status": "new"
-      }
-    ],
-    "importantDates": [],
-    "updatedAt": "2024-10-10T07:44:34.775Z",
-    "view": 3
-  },
-  {
-    "id": "320465ba-3df5-4431-b029-798575ab0a91",
-    "information": {
-      "name": "Australasian Computing Education Conference (ACE)",
-      "acronym": "ACE",
-      "rating": null,
-      "rank": "Australasian B",
-      "nkey": "67076615de06a49fe6f38124",
+      "nkey": "670f39fdb5f02c826f0f4cea",
       "source": "CORE2021",
       "status": true,
       "fieldOfResearch": [
-        "Human-centred computing"
+        "Software engineering"
       ]
     },
     "organizations": [
       {
-        "org_id": "346d7333-d2bb-4e3c-b2b4-040fffa7b0e6",
+        "org_id": "96b75114-32a3-4903-89c9-084b716684ad",
         "name": "default",
-        "type": "offline",
+        "type": "hybrid",
         "location": "updating",
         "start_date": null,
         "end_date": null,
@@ -121,114 +131,25 @@
     ],
     "importantDates": [
       {
-        "date_id": "e3a4dba0-ab9d-48d3-8540-4a333fa0c75e",
-        "date_type": "submission deadline and bidding period begins",
-        "date_value": "2023-10-13",
+        "date_id": "9669cfe9-ff4c-4077-b241-6ff2cd44bbdd",
+        "date_type": "Full Paper Submission",
+        "date_value": "2024-03-22",
         "status": "new"
       },
       {
-        "date_id": "572749d0-8b16-4839-9353-fd0d45caebf5",
-        "date_type": "author notifications",
-        "date_value": "2023-11-13",
+        "date_id": "20ec8496-139c-4369-9efc-fe48fd34238c",
+        "date_type": "Acceptance Notification",
+        "date_value": "2024-04-08",
+        "status": "new"
+      },
+      {
+        "date_id": "be277adf-567e-4f69-adb5-c613c73b5b96",
+        "date_type": "Camera Ready Papers/Registration",
+        "date_value": "2024-04-19",
         "status": "new"
       }
     ],
-    "updatedAt": "2024-10-10T05:41:25.386Z",
-    "view": 1
-  },
-  {
-    "id": "902e0fea-13a6-4aed-9cda-ce1595e168fe",
-    "information": {
-      "name": "ACM International Conference on Advances in Computer Entertainment (merged with DIMEA, Digital Interactive Media in Entertainment and Arts, in 2009)",
-      "acronym": "ACE",
-      "rating": null,
-      "rank": "B",
-      "nkey": "67076615de06a49fe6f3811a",
-      "source": "CORE2021",
-      "status": true,
-      "fieldOfResearch": [
-        "Graphics, augmented reality and games"
-      ]
-    },
-    "organizations": [
-      {
-        "org_id": "bdcb20d0-02cb-48af-9cff-e672eb3a9aea",
-        "name": "default",
-        "type": "offline",
-        "location": "updating",
-        "start_date": null,
-        "end_date": null,
-        "status": "new"
-      }
-    ],
-    "importantDates": [],
-    "updatedAt": "2024-10-10T05:35:14.832Z",
-    "view": 4
-  },
-  {
-    "id": "2129ef92-1e5b-4c0b-bfe4-81af9b1084d1",
-    "information": {
-      "name": "ACM International Conference on Information and Knowledge Management",
-      "acronym": "CIKM",
-      "rating": null,
-      "rank": "A",
-      "nkey": "6705133a5330be7c58ae3a8b",
-      "source": "CORE2023",
-      "status": true,
-      "fieldOfResearch": [
-        "none"
-      ]
-    },
-    "organizations": [
-      {
-        "org_id": "6e34300c-6a8a-48dc-bbab-6eccbb16e68c",
-        "name": "default",
-        "type": "offline",
-        "location": "between",
-        "start_date": null,
-        "end_date": null,
-        "status": "new"
-      }
-    ],
-    "importantDates": [
-      {
-        "date_id": "6873a38d-6733-4e3b-9fec-d8e88815edf7",
-        "date_type": "Full papers and Applied Research papers abstract deadline",
-        "date_value": "2024-06-03",
-        "status": "new"
-      },
-      {
-        "date_id": "603f066f-5cd6-40e2-96dd-06ee157dfd95",
-        "date_type": "abstract submission",
-        "date_value": "2024-05-13",
-        "status": "new"
-      },
-      {
-        "date_id": "73115198-3323-4e94-8258-c942aebda0a4",
-        "date_type": "Abstract Deadline",
-        "date_value": "2024-05-13",
-        "status": "new"
-      },
-      {
-        "date_id": "dd598b21-fc54-4cc6-b351-4a2819f7abe4",
-        "date_type": "Full Papers",
-        "date_value": "2024-05-13",
-        "status": "new"
-      },
-      {
-        "date_id": "0bbbec27-e6b8-42be-b066-ddc754892d50",
-        "date_type": "Papers Notifications",
-        "date_value": "2024-07-16",
-        "status": "new"
-      },
-      {
-        "date_id": "b621936d-f49a-4c45-916e-a256c0f90085",
-        "date_type": "Camera Ready Deadline",
-        "date_value": "2024-08-08",
-        "status": "new"
-      }
-    ],
-    "updatedAt": "2024-10-08T11:12:04.761Z",
-    "view": 15
+    "updatedAt": "2024-10-16T04:00:35.896Z",
+    "view": 7
   }
 ]

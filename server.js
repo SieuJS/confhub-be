@@ -68,7 +68,7 @@ const setupCronJobs = require('./src/config/cron-job');
 
 (async () => {
 	await dbConnect() ;
-	// await dataSeeding(['admin', 'conferences']);
+	await dataSeeding(['admin']);
 	await crawlerDBConnect();
 
 	// create log
